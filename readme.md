@@ -1,1 +1,1 @@
-# Algoroth code out
+# Algorithm code out
