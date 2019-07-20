@@ -1,20 +1,20 @@
-function harmlessRansome(noteText, magazineText) {
+function harmlessRansom(noteText, magazineText) {
     var noteArr = noteText.split(' ');
     var magazineArr = magazineText.split(' ');
     var magazineObj = {};
 
     magazineArr.forEach(word => {
-        if (!magazineObj[word]) {
+        if(!magazineObj[word]) {
             magazineObj[word] = 0;
         }
-        magazineObj[word]++;        
+        magazineObj[word]++;
     });
 
     console.log(magazineObj);
 
     var noteIsPossible = true;
     noteArr.forEach(word => {
-        if (magazineObj[word]) {
+        if(magazineObj[word]) {
             magazineObj[word]--;
             if (magazineObj[word] < 0) {
                 noteIsPossible = false;
@@ -27,4 +27,4 @@ function harmlessRansome(noteText, magazineText) {
     return noteIsPossible;
 }
 
-console.log(harmlessRansome('This This', 'This is all text of magazine text'));
+console.log(harmlessRansom('text text text','This is all text of magazine text'));
