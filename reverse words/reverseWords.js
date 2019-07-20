@@ -1,18 +1,17 @@
-function reverseWords(string) {
+function reverseWord(string) {
     var wordArr = string.split(' ');
-    var reverseArr = [];
+    var reversedWordArr = [];
+
     wordArr.forEach(word => {
-        var charArr = word.split('');
-        var reverseCharArr = [];
+        var reversedWord = "";
 
-        var charLength = charArr.length - 1;
-        for (var i = charLength; i > -1; i--) {
-            reverseCharArr.push(charArr[i]);
+        for (var i = word.length - 1; i >= 0; i--) {
+            reversedWord += word[i];
         }
-        reverseArr.push(reverseCharArr.join(''));
+
+        reversedWordArr.push(reversedWord);
     });
+    return reversedWordArr.join(' ');
+} 
 
-    return reverseArr.join(' ');
-}
-
-console.log(reverseWords("this is a string of words"));
+console.log(reverseWord("this is string of words"));
